@@ -1,0 +1,157 @@
+*{margin: 0px; padding: 0px;}
+
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+body{font-family: "Arsenal SC", sans-serif;}
+.bg-yellow{background:#000000;}
+@media  (min-width: 1200px){
+    .container, .container-lg , .container-md, .container-sm, .container-xl{
+        max-width:1140px;
+    }
+}
+::-webkit-scrollbar{width:8px !important; height: 8px !important;}
+::-webkit-scrollbar-thumb{background:#ccc !important;}
+::-webkit-scrollbar-track{background: transparent !important;}
+
+.headerWrapper{border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px;}
+
+.headerWrapper .top-strip{padding: 8px 0px;}
+.headerWrapper .top-strip p{color: white; font-size: 13px; font-weight:400 ;}
+.headerWrapper .header{width:100%; height: auto; padding:10px 0px;}
+.header .container{display:flex; align-items:center;}
+.logoWrapper img{max-width:200px; height:60px; border-radius: 10px; box-shadow: 2px 2px 6px #a3a5a5;}
+.container{max-width:85%;}
+.headerWrapper .header .part2 .countryDrop{width:150px; height: 50px; min-width:150px;border: 1px solid rgba(0,0,0,0.2);border-radius: 10px !important; padding: 10px 10px !important;}
+.headerWrapper .header .part2 .countryDrop{text-align:left; justify-content:flex-start !important;}
+.countryDrop .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+}
+.headerWrapper .header .part2 .countryDrop .info .Label{font-size:14px !important; text-transform:capitalize !important; color:#2b2626 !important; line-height: 18px !important;}
+.headerWrapper .header .part2 .countryDrop .info .name{font-size:16px !important; text-transform:capitalize !important; color: #000000 !important; font-weight:700;line-height: 20px !important}
+ .headerSearch{width:96%; height:50px;background:#f3f4f7; padding: 10px;position:relative;border-radius: 5px solid rgba(0,0,0,0.4);}
+ .headerSearch input{background:transparent !important; outline:none !important; font-size:16px; color: rgba(0,0,0,0.8); width: 350px; height: 40px;border:0px !important; padding: 0px 10px !important;}
+ .headerSearch input::-webkit-input-placeholder{color: rbga(0,0,0,0.4);}
+ .headerSearch button { position: absolute !important; right: 0px; top: 56%; transform: translateY(-50%); z-index: 100; max-width: 20px !important; height: 40px !important; width: 40px !important; border-radius: 50% !important; color: #000; }
+
+header .part3 .circle{align-items:center;justify-content:center; min-width: 50px !important;height: 50px !important;width: 50px !important;border-radius: 50% !important;border:1px solid rgba(0,0,0,0.1);color:#000;}
+header .part3 .circle svg{font-size:20px;}
+.cart .price{font-size: 18px; color: rgba(0,0,0,0.8); font-weight: 700;}
+.cart button{background:#F7E9D5!important ;}
+.cart button svg{color: rgba(0,0,0,0.8) !important;}
+.cart .count{position:absolute; top:-6px; right:0px; background:rgba(0,0,0,0.8) ;border-radius: 50%;color:#fff;width:20px; height:20px;}
+
+.locationmodel .MuiPaper-elevation{padding:30px; position:relative;}
+.locationmodel .countrylist{margin-bottom: 0px;max-height:400px ; overflow-y: scroll; overflow-x: hidden;}
+.locationmodel .countrylist li{width:100%;list-style: none; text-transform: capitalize !important;color:#000 !important;}
+.locationmodel .countrylist li button{width:100%; text-transform: capitalize !important;color:#000 !important; justify-content: flex-start !important;
+padding:10px 20px;}
+.locationmodel .countrylist li button .active{background-color: #a3a5a5;}
+.locationmodel .close_{position:absolute;top: 10px; right:10px;color:#000 !important; min-width: 40px; width:40px; height: 40px; border-radius: 50% !important;}
+.locationmodel .close_ svg{font-size:22px;}
+
+nav .navPart1{max-width:20%; }
+nav .navPart2{max-width: 80%;}
+
+nav .navPart1 .catWrapper{position:relative;}
+nav .navPart1 .catWrapper .sidebarNav{width: 100%; height: 0px; opacity:0; background: #fff; position: absolute; top:125%; left:0px;border: 1px solid rgba(0,0,0,0.1); padding: 15px 0px; display: none;}
+
+nav .navPart1 .catWrapper .sidebarNav ul li{width: 100%;list-style: none;padding:0px 15px;}
+nav .navPart1 .catWrapper .sidebarNav ul li button{color:#000; width:100%;justify-content: flex-start; text-transform: capitalize;}
+nav .navPart1 .catWrapper .sidebarNav ul li button:hover{background: transparent !important;}
+nav .navPart1 .catWrapper .sidebarNav .open{height:100%; opacity:1; visibility: inherit;}
+
+nav .allcattab{background: rgba(0,0,0,0.8);padding:10px 15px !important;border-radius: 30px;}
+nav .allcattab *{color:#f3f4f7;}
+nav .allcattab:hover{background: #a3a5a5;}
+nav .allcattab .text{font-weight:600; font-size: 15px;}
+
+nav .allcattab .icon1 svg{font-size: 18px !important;}
+nav .allcattab .icon2 svg{font-size: 18px !important;}
+
+nav .navPart2 ul {
+    margin-bottom: 0px;
+    display: flex; /* Ensures items are in one line */
+    align-items: center; /* Aligns items vertically */
+    justify-content: space-around; /* Ensures equal spacing between items */
+    list-style-type: none; /* Removes default list styling */
+    padding: 0px 0px 0px 0px ; /* Removes default padding */
+}
+nav .navPart2 ul li {
+    margin: 0px 10px; /* Sets margin around each list item */
+    position: relative;
+    padding-bottom: 20px;
+}
+nav .navPart2 ul li a{
+    font-size: 13px;
+    font-weight: 550;
+    text-decoration: none;
+    color: rgba(0,0,0,0.7) !important;
+    font-optical-sizing: auto;
+    text-transform: uppercase;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    padding: 10px 13px;
+    transition: all 0.1s ease-in-out;
+}
+nav .navPart2 ul li a:hover {
+    background: #a3a5a5;
+    color: #2c2d2e;
+    border-radius: 10%;
+}
+
+nav .navPart2 ul li a button {
+    margin-left: 5px; /* Add space between icon and text */
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    color: rgba(0,0,0,0.7); /* Inherit text color */
+    font-size: 13px !important;
+    font-weight: 550;
+    cursor: pointer; /* Change cursor on hover */
+    padding: 0; /* Remove default padding */
+}
+
+/* Base styles */
+/*nav .navPart2 .list-inline {
+    position: relative;
+}
+
+nav .navPart2 .list-inline-item {
+    position: relative;
+}*/
+
+nav .navPart2 .submenu {
+    display: none; /* Hide submenu by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px; /* Adjust this as needed */
+    background: #fff;
+
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+/* Show submenu on hover */
+nav .navPart2 .list-inline-item:hover .submenu {
+    display: block;
+    transition:all 0.1s ease-in-out;
+}
+
+/* Additional styling for submenu items */
+nav .navPart2 .submenu a{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav .navPart2 .submenu a button{width:100%;justify-content:flex-start !important; border-radius:0 px !important; text-transform:capitalize !important; font-weight:500 !important;}
+nav .navPart2 ul li .submenu a button:hover{background: #f1f1f1;}
+nav .navPart2 ul li:hover .submenu{opacity: 1; visibility: inherit; top:100%}
+
+
