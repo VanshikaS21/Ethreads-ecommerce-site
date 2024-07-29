@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body{font-family: "Arsenal SC", sans-serif;}
 .bg-yellow{background:#000000;}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+
 @media  (min-width: 1200px){
     .container, .container-lg , .container-md, .container-sm, .container-xl{
         max-width:1140px;
@@ -11,6 +15,10 @@ body{font-family: "Arsenal SC", sans-serif;}
 ::-webkit-scrollbar{width:8px !important; height: 8px !important;}
 ::-webkit-scrollbar-thumb{background:#ccc !important;}
 ::-webkit-scrollbar-track{background: transparent !important;}
+
+.cursor{cursor:pointer;}
+.text-light{color: #aeaaaa !important; font-weight: 400 !important;}
+.text-sml{font-size:16px !important;}
 
 .headerWrapper{border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px;}
 
@@ -53,19 +61,60 @@ padding:10px 20px;}
 
 nav .navPart1{max-width:20%; }
 nav .navPart2{max-width: 80%;}
+nav .navPart1 .catWrapper {
+    position: relative;
+}
 
-nav .navPart1 .catWrapper{position:relative;}
-nav .navPart1 .catWrapper .sidebarNav{width: 100%; height: 0px; opacity:0; background: #fff; position: absolute; top:125%; left:0px;border: 1px solid rgba(0,0,0,0.1); padding: 15px 0px; display: none;}
+nav .navPart1 .catWrapper .sidebarNav{
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    background: #fff;
+    position: absolute;
+    top: 125%;
+    left: 0;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 15px 0;
+    transition: all 0.2s;
+    visibility: hidden;
+    z-index: 100;
+}
 
-nav .navPart1 .catWrapper .sidebarNav ul li{width: 100%;list-style: none;padding:0px 15px;}
-nav .navPart1 .catWrapper .sidebarNav ul li button{color:#000; width:100%;justify-content: flex-start; text-transform: capitalize;}
-nav .navPart1 .catWrapper .sidebarNav ul li button:hover{background: transparent !important;}
-nav .navPart1 .catWrapper .sidebarNav .open{height:100%; opacity:1; visibility: inherit;}
+nav .navPart1 .catWrapper .sidebarNav.open{
+    height: auto; /* Ensures sidebar height adjusts to content */
+    opacity: 1;
+    visibility: visible;
+}
 
-nav .allcattab{background: rgba(0,0,0,0.8);padding:10px 15px !important;border-radius: 30px;}
+nav .navPart1 .catWrapper .sidebarNav ul li {
+    position: static;
+    width: 100%;
+    list-style: none;
+    padding: 0 15px;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li button {
+    color: #000;
+    width: 100%;
+    justify-content: flex-start;
+    text-transform: capitalize;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li button:hover {
+    background:  #a3a5a5 !important;
+
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li{position: static;}
+nav .navPart1 .catWrapper .sidebarNav ul li .submenu{position: absolute;top: 0px; left: 110%;width: 250px
+    ;height:auto; background: #fff; z-index: 100; opacity: 0; visibility: hidden; transition: all 0.2s ease-in-out; padding: 20px;}
+
+    nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu{opacity: 1;visibility: inherit;left:100%;}
+
+nav .allcattab{background: rgba(0,0,0,0.8);padding:10px 15px !important;border-radius: 20px; }
 nav .allcattab *{color:#f3f4f7;}
 nav .allcattab:hover{background: #a3a5a5;}
-nav .allcattab .text{font-weight:600; font-size: 15px;}
+nav .allcattab .text{font-weight:600; font-size: 16px;}
 
 nav .allcattab .icon1 svg{font-size: 18px !important;}
 nav .allcattab .icon2 svg{font-size: 18px !important;}
@@ -129,7 +178,6 @@ nav .navPart2 .submenu {
     left: 0;
     min-width: 200px; /* Adjust this as needed */
     background: #fff;
-
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
@@ -154,4 +202,55 @@ nav .navPart2 .submenu a button{width:100%;justify-content:flex-start !important
 nav .navPart2 ul li .submenu a button:hover{background: #f1f1f1;}
 nav .navPart2 ul li:hover .submenu{opacity: 1; visibility: inherit; top:100%}
 
+.homebanner {
+    position: relative;
+    overflow: hidden;
+}
 
+.homebanner * {
+    outline: none !important;
+}
+
+.homebanner .slick-prev,
+.homebanner .slick-next {
+    position: absolute;
+    top: 45%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #a3a5a5;
+    border-radius: 100%;
+}
+
+.homebanner .slick-prev {
+    left: 25px;
+}
+
+.homebanner .slick-next {
+    right: 25px;
+}
+
+.homebanner{cursor:pointer;}
+
+.homeproducts{padding: 25px 0px; width: 100%;}
+.homeproducts .banner {
+    width: 100%;
+    height: 300px; /* Adjust this height as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; /* Added to position the image within the div */
+}
+
+.homeproducts .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the div while maintaining aspect ratio */
+    border-radius: 10px; /* Ensures the image respects the border radius */
+}
+
+.view{padding: 5px 15px !important;background: #fff; border:1px solid rgba(0, 0, 0, 0.1) !important;
+border-radius: 30px !important;color:#9f9797;font-weight: 500;text-transform: capitalize;}
+.view svg{font-size: 20px;}
